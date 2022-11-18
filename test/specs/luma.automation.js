@@ -13,7 +13,7 @@ describe('Luma Automation Assignment', () => {
     it('should create new user account successfully', async () => {
         await LumaHomePage.open();
         await LumaHomePage.CreateAnAccount();
-        await LumaCreateCustomerPage.CreateNewUser(faker.name.firstName(),faker.name.lastName(),faker.internet.email(),faker.internet.password());
+        await LumaCreateCustomerPage.CreateNewUser(faker.name.firstName(),faker.name.lastName(),faker.internet.email(),faker.internet.password(25));
         
        
         await expect(LumaCreateCustomerPage.SuccessfulAlert).toBeExisting();
@@ -35,7 +35,7 @@ describe('Luma Automation Assignment', () => {
     it('should add Argus All-Weather Tank to cart', async () => {
         await LumaHomePage.open();
         //await LumaHomePage.btnAddToCartHomePage_AllWeatherTank.click();
-        await LumaHomePage.clickAddToCartBtnForAllWeatherTankTop_HomePage();
+        await LumaHomePage.addAllWeatherTankTopToCart_HomePage();
         await LumaProductPage.addAllWeatherTankTopToCart();
         
        
@@ -46,7 +46,7 @@ describe('Luma Automation Assignment', () => {
 
     it('should purchase Argus All-Weather Tank', async () => {
         await LumaShippingPage.open();           
-        await LumaHomePage.clickAddToCartBtnForAllWeatherTankTop_HomePage();
+        await LumaHomePage.addAllWeatherTankTopToCart_HomePage();
         await LumaProductPage.proceedToCheckoutTankTop();
         await LumaShippingPage.completePurchaseOfTankTop(faker.internet.email(),faker.name.firstName(),faker.name.lastName(),
                                                         faker.address.streetAddress(),faker.address.street(),faker.address.county(),
@@ -63,7 +63,7 @@ describe('Luma Automation Assignment', () => {
         const email=faker.internet.email(),lname=faker.name.lastName();
        
         await LumaShippingPage.open();           
-        await LumaHomePage.clickAddToCartBtnForAllWeatherTankTop_HomePage();
+        await LumaHomePage.addAllWeatherTankTopToCart_HomePage();
         await LumaProductPage.proceedToCheckoutTankTop();
         await LumaShippingPage.completePurchaseOfTankTop(email,faker.name.firstName(),lname,
                                                         faker.address.streetAddress(),faker.address.street(),faker.address.county(),
@@ -86,7 +86,7 @@ describe('Luma Automation Assignment - Unhappy Paths', () => {
     it('should prevent All Weather Tank Top from being added to cart when quantity is set to zero', async () => {
 
         await LumaHomePage.open();
-        await LumaHomePage.clickAddToCartBtnForAllWeatherTankTop_HomePage();
+        await LumaHomePage.addAllWeatherTankTopToCart_HomePage();
         await LumaProductPage.inputQty.setValue(0);
         await LumaProductPage.addAllWeatherTankTopToCart();
         
@@ -97,7 +97,7 @@ describe('Luma Automation Assignment - Unhappy Paths', () => {
     it('should prevent All Weather Tank Top from being added to cart without selecting a size', async () => {
 
         await LumaHomePage.open();
-        await LumaHomePage.clickAddToCartBtnForAllWeatherTankTop_HomePage();
+        await LumaHomePage.addAllWeatherTankTopToCart_HomePage();
         await LumaProductPage.addAllWeatherTankTopToCartWithoutSize();
         
         await expect(LumaProductPage.divSizeRequiredFieldError).toBeDisplayed();

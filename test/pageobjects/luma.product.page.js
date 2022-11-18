@@ -8,10 +8,6 @@ class LumaProductPage extends Page {
       /**
      * selectors using getter methods
      */
-    
-    get divChooseOptionsForItem(){
-        return $(`div[data-bind='html: $parent.prepareMessageForHtml(message.text)']`);
-    }
 
     get divSizeSmall(){
         return $(`#option-label-size-143-item-167`);
@@ -50,7 +46,8 @@ class LumaProductPage extends Page {
      */
 
     async addAllWeatherTankTopToCart(){
-        await this.divChooseOptionsForItem.waitForDisplayed();
+        //await this.divChooseOptionsForItem.waitForDisplayed();
+        await this.btnAddToCart_AllWeatherTank.waitForDisplayed();
         await this.divSizeSmall.click();
         await this.divColorGray.click();
         await this.btnAddToCart_AllWeatherTank.click();
@@ -62,7 +59,7 @@ class LumaProductPage extends Page {
     }
 
     async addAllWeatherTankTopToCartWithoutSize(){
-        await this.divChooseOptionsForItem.waitForDisplayed();
+        await this.btnAddToCart_AllWeatherTank.waitForDisplayed();
         await this.divColorGray.click();
         await this.btnAddToCart_AllWeatherTank.click();
     }
