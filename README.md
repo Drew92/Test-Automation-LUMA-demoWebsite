@@ -11,7 +11,7 @@ This project executes the following workflows:
 The project also contains 2 Unhappy Paths and uses the `NPM Faker` package for data-driven testing
 
 ## Instructions
-- Navigate to the root directory in your Terminal.
+- Navigate to the project's root directory in your Terminal.
 - Enter the command `npm install` to initialize the project.
 - Enter the command `npm run test` to execute all six (6) tests.
 
