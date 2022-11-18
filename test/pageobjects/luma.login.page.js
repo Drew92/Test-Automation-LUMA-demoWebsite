@@ -2,7 +2,7 @@
 const Page = require('./page');
 
 /**
- * sub page containing specific selectors and methods for a specific page
+ * sub page containing specific selectors and methods for a login page
  */
 class LumaLoginPage extends Page {
     /**
@@ -27,7 +27,7 @@ class LumaLoginPage extends Page {
     }
 
     /**
-     * methods to encapsule automation code to interact with the page
+     * methods to encapsule automation code to interact with the login page
      */
 
     async login (email, password) {

@@ -72,7 +72,7 @@ describe('Luma Automation Assignment', () => {
 
         await LumaShippingPage.btnPlaceOrder.waitForClickable();
         await LumaShippingPage.btnPlaceOrder.click();
-        const orderNumber = await LumaOrderSuccessPage.verifyOrderPurchase();
+        const orderNumber = await LumaOrderSuccessPage.getOrderNumberToVerifyPurchase();
         await LumaOrdersAndReturnsPage.findOrder(orderNumber,lname,email);
 
 

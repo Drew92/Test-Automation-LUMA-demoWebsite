@@ -1,11 +1,11 @@
 const Page = require('./page');
 
 /**
- * sub page containing specific selectors and methods for a specific page
+ * sub page containing specific selectors and methods for a home page
  */
 class LumaHomePage extends Page {
     /**
-     * define selectors using getter methods
+     * define selectors using getter methods 
      */
     get linkSignIn () {
         return $(`div[class='panel header'] li[data-label='or'] a`);
@@ -24,7 +24,7 @@ class LumaHomePage extends Page {
     }
 
 /**
-     * methods to encapsule automation code to interact with the page
+     * methods to encapsule automation code to interact with the home page
      */
   
 

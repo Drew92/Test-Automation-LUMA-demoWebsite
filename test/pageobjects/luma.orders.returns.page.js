@@ -2,7 +2,7 @@
 const Page = require('./page');
 
 /**
- * sub page containing specific selectors and methods for a specific page
+ * sub page containing specific selectors and methods for the orders and returns page
  */
 class LumaOrderSuccessPage extends Page {
     /**
@@ -34,7 +34,7 @@ class LumaOrderSuccessPage extends Page {
     }
 
     /**
-     * methods to encapsule automation code to interact with the page
+     * methods to encapsule automation code to interact with the orders and returns page
      */
 
     async findOrder (orderNum,lname,email) {

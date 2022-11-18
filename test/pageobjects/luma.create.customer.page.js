@@ -2,7 +2,7 @@
 const Page = require('./page');
 
 /**
- * sub page containing specific selectors and methods for a specific page
+ * sub page containing specific selectors and methods for customer page
  */
 class CreateCustomerPage extends Page {
     /**
@@ -37,7 +37,7 @@ class CreateCustomerPage extends Page {
     }
 
     /**
-     * a method to encapsule automation code to interact with the page
+     * a method to encapsule automation code to interact with the customer page
      */
     async CreateNewUser (firstname, lastname,email,password) {
         await this.inputFirstName.setValue(firstname);

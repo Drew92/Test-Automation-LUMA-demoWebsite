@@ -1,7 +1,7 @@
 const Page = require('./page');
 
 /**
- * sub page containing specific selectors and methods for a specific page
+ * sub page containing specific selectors and methods for the shipping page
  */
 class LumaShippingPage extends Page {
     /**
@@ -68,7 +68,7 @@ class LumaShippingPage extends Page {
     }
 
     /**
-     * methods to encapsule automation code to interact with the page
+     * methods to encapsule automation code to interact with the shipping page
      */
   
     async completePurchaseOfTankTop(email,fname,lname,address,address2,address3,city,stateOrProvince,zip,country,phone){

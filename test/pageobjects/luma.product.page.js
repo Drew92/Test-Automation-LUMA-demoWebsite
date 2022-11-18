@@ -1,7 +1,7 @@
 const Page = require('./page');
 
 /**
- * sub page containing specific selectors and methods for a specific page
+ * sub page containing specific selectors and methods for the product page
  */
 class LumaProductPage extends Page {
 
@@ -42,7 +42,7 @@ class LumaProductPage extends Page {
     }
    
     /**
-     * methods to encapsule automation code to interact with the page
+     * methods to encapsule automation code to interact with the product page
      */
 
     async addAllWeatherTankTopToCart(){
