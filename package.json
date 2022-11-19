@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx kill-port 4444 && npx wdio run wdio.conf.js"
+    "test-all": "npx kill-port 4444 && npx wdio run wdio.conf.js",
+    "sign-up": "npx kill-port 4444 && npx wdio run wdio.conf.js --spec luma.sign.up.js",
+    "add-item-to-cart": "npx kill-port 4444 && npx wdio run wdio.conf.js --spec luma.add.item.to.cart.js",
+    "purchase-item": "npx kill-port 4444 && npx wdio run wdio.conf.js --spec luma.purchase.item.js",
+    "verify-purchase": "npx kill-port 4444 && npx wdio run wdio.conf.js --spec luma.verify.purchase.history.js"
   },
   "keywords": [],
   "author": "",

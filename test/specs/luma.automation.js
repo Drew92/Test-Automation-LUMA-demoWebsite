@@ -8,7 +8,7 @@ const LumaProductPage = require('../pageobjects/luma.product.page');
 const { faker } = require('@faker-js/faker');
 
 
-describe('Luma Automation Assignment', () => {
+describe.skip('Luma Automation Assignment', () => {
 
     it('should create new user account successfully', async () => {
         await LumaHomePage.open();
@@ -81,7 +81,7 @@ describe('Luma Automation Assignment', () => {
 
 });
 
-describe('Luma Automation Assignment - Unhappy Paths', () => {
+describe.skip('Luma Automation Assignment - Unhappy Paths', () => {
 
     it('should prevent All Weather Tank Top from being added to cart when quantity is set to zero', async () => {
 
