@@ -5,7 +5,7 @@ const LumaShippingPage = require('../pageobjects/luma.shipping.page');
 const LumaOrdersAndReturnsPage = require('../pageobjects/luma.orders.returns.page');
 const { faker } = require('@faker-js/faker');
 
-describe('Luma Automation Assignment', () => {
+describe('Verify a purchase made in order history', () => {
 
     it('should purchase Argus All-Weather Tank and verify purchase in order history', async () => {
 
@@ -23,8 +23,7 @@ describe('Luma Automation Assignment', () => {
         await LumaShippingPage.btnPlaceOrder.click();
         const orderNumber = await LumaOrderSuccessPage.getOrderNumberToVerifyPurchase();
         await LumaOrdersAndReturnsPage.findOrder(orderNumber,lname,email);
-
-
+        
         await expect(LumaOrdersAndReturnsPage.spanOrderNumberTitle_OrderInfo).toHaveTextContaining(`Order # ${orderNumber}`);
     });
 });

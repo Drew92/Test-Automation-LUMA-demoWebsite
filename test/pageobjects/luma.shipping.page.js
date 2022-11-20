@@ -11,6 +11,10 @@ class LumaShippingPage extends Page {
         return $(`//input[contains(@data-bind,'textInput: email,')]`);
     }
 
+    get divCustomerEmailError(){
+        return $(`#customer-email-error`);
+    }
+
     get inputFirstName() {
         return $(`input[name='firstname']`);
     }
@@ -100,7 +104,30 @@ class LumaShippingPage extends Page {
         await this.inputFlatRate.click();
         await this.btnNext.click();
     }
+    
+    async enterCustomerEmailForShipping_DataDrivenTest(email,fname,lname,address,address2,address3,city,stateOrProvince,zip,country,phone){
+        
+        await this.tdOrderTotal.waitForDisplayed();
+        await this.btnProceedToCheckout.isClickable();
+        await this.btnProceedToCheckout.click();
+        await this.inputEmailAddress.setValue(email);
+        await this.inputFirstName.setValue(fname);
+        await this.inputLastName.setValue(lname);
+        await this.inputStreetAddress.setValue(address);
+        await this.inputStreetAddress2.setValue(address2);
+        await this.inputStreetAddress3.setValue(address3);
+        await this.inputCity.scrollIntoView();
+        await this.inputCity.setValue(city);
+        await this.selectStateOrProvince.waitForClickable()
+        await this.selectStateOrProvince.selectByAttribute('data-title',stateOrProvince);    
+        await this.inputZipOrPostalCode.setValue(zip); 
+        await this.selectCountry.selectByAttribute('data-title',country);
+        await this.inputPhoneNumber.scrollIntoView();
+        await this.inputPhoneNumber.setValue(phone);
+        await this.inputFlatRate.click();
+        await this.btnNext.click();
 
+    }
 
 }
 

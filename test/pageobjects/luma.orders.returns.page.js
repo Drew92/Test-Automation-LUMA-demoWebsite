@@ -42,7 +42,8 @@ class LumaOrderSuccessPage extends Page {
         await this.inputOrderID.setValue(orderNum);
         await this.inputBillingLastName.setValue(lname);
         await this.selectFindOrderBy.selectByVisibleText('Email');
-        await this.inputFindOrderByEmail.setValue(email); 
+        await this.inputFindOrderByEmail.setValue(email);
+        await this.btnContinue.waitForClickable();
         await this.btnContinue.click();
     }
 
