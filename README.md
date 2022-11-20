@@ -1,3 +1,4 @@
+
 # Andrew Gayle - LUMA Website Test Automation
 
 A WebdriverIO test automation project for the LUMA (demo) website. 
@@ -8,10 +9,29 @@ This project executes the following workflows:
 * Purchasing a Product 
 * Verify Purchase in Order History
 
-The project also contains 2 Unhappy Paths and uses the `NPM Faker` package for data-driven testing
+The project also contains some Unhappy Paths, a Data Driven test and uses the `NPM Faker` package.
 
 ## Instructions
 - Navigate to the project's root directory in your Terminal.
 - Enter the command `npm install` to initialize the project.
-- Enter the command `npm run test` to execute all six (6) tests.
+- Enter the one of the given commands to run the respective test.
 
+### Commands
+- To execute the "Sign Up" test: `npm run sign-up`
+- To execute the "Add Product to Cart" test with Unhappy paths: `npm run add-item-to-cart`
+- To execute the "Purchasing a Product" test with data driven tests: `npm run purchase-item`
+- To execute the "Verify Purchase in Order History" test: `npm run verify-purchase`
+
+You my also execute all tests simultaneously using `npm run test-all`. However this is **NOT RECOMMENDED** as it could lead to timeout error and thus cause the test(s) to fail.
+
+## Cross Browser Testing
+
+This test automation project runs in the Google Chrome browser by default. The test automation can be configured to run inside the Firefox browser. To do this:
+
+- Open the `wdio.conf.js` file.
+- Go to the `capabilities` section.
+- Comment line 59 that has `browserName: 'chrome',`.
+- Uncomment line 60 that has `//browserName: 'firefox',`.
+- Save the file and will now be executed in Firefox.
+
+To run the test in Google Chrome again just undo these changes.
