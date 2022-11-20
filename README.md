@@ -14,7 +14,7 @@ The project also contains some Unhappy Paths, a Data Driven test and uses the `N
 ## Instructions
 - Navigate to the project's root directory in your Terminal.
 - Enter the command `npm install` to initialize the project.
-- Enter the one of the given commands to run the respective test.
+- Enter one of the given commands below to run their respective tests.
 
 ### Commands
 - To execute the "Sign Up" test: `npm run sign-up`
@@ -22,11 +22,11 @@ The project also contains some Unhappy Paths, a Data Driven test and uses the `N
 - To execute the "Purchasing a Product" test with data driven tests: `npm run purchase-item`
 - To execute the "Verify Purchase in Order History" test: `npm run verify-purchase`
 
-You my also execute all tests simultaneously using `npm run test-all`. However this is **NOT RECOMMENDED** as it could lead to timeout error and thus cause the test(s) to fail.
+You my also execute all tests simultaneously using `npm run test-all`. Please note that this is **NOT RECOMMENDED** as it could lead to timeout errors and thus cause the test(s) to fail.
 
 ## Cross Browser Testing
 
-This test automation project runs in the Google Chrome browser by default. The test automation can be configured to run inside the Firefox browser. To do this:
+This test automation project runs inside the Google Chrome browser by default. The test automation can also be configured to run inside the Firefox browser. To do this:
 
 - Open the `wdio.conf.js` file.
 - Go to the `capabilities` section.
