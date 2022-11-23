@@ -1,3 +1,4 @@
+
 const Page = require('./page');
 
 /**
@@ -22,11 +23,11 @@ class LumaProductPage extends Page {
     }
 
     get alertItemAddedToCart() {
-        return $(`div[class='message-success success message'] div[data-bind='html: $parent.prepareMessageForHtml(message.text)']`);
+        return $(`.message-success.success.message`);
     }
 
     get linkShoppingCart(){
-        return $(`div[data-bind='html: $parent.prepareMessageForHtml(message.text)'] a`);
+        return $(`//a[text()='shopping cart']`);
     }
 
     get inputQty(){
@@ -38,7 +39,7 @@ class LumaProductPage extends Page {
     }
 
     get divSizeRequiredFieldError(){
-        return $(`div[for='super_attribute[143]']`)
+        return $(`//div[@id='super_attribute[143]-error']`);
     }
    
     /**
@@ -46,7 +47,6 @@ class LumaProductPage extends Page {
      */
 
     async addAllWeatherTankTopToCart(){
-        //await this.divChooseOptionsForItem.waitForDisplayed();
         await this.btnAddToCart_AllWeatherTank.waitForDisplayed();
         await this.divSizeSmall.click();
         await this.divColorGray.click();
