@@ -1,6 +1,8 @@
 
 # Andrew Gayle - LUMA Website Test Automation
 
+### Website URL: https://magento.softwaretestingboard.com/
+
 A WebdriverIO test automation project for the LUMA (demo) website. 
 This project executes the following workflows: 
 
