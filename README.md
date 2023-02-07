@@ -1,5 +1,5 @@
 
-# Andrew Gayle - LUMA Website Test Automation
+# LUMA Website Test Automation
 
 ### Website URL: https://magento.softwaretestingboard.com/
 
